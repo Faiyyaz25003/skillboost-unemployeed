@@ -1,26 +1,110 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Brand Color Palette */
+  --color-primary: #1E40AF;      /* Deep Blue */
+  --color-secondary: #0F766E;    /* Teal */
+  --color-accent: #F59E0B;       /* Orange */
+  --color-success: #16A34A;      /* Success Green */
+  --color-bg: #F8FAFC;           /* Off White */
+  --color-text: #111827;         /* Charcoal */
+  --color-border: #E5E7EB;       /* Light Gray */
+
+  --background: var(--color-bg);
+  --foreground: var(--color-text);
+
+  /* Component tokens */
+  --radius-button: 10px;
+  --radius-card: 18px;
+  --input-height: 48px;
+  --table-row-height: 52px;
+  --card-bg: #FFFFFF;
+
+  /* Typography */
+  --font-heading: "Poppins", "Calibri", sans-serif;
+  --font-body: "Inter", "Calibri", sans-serif;
+  --h1-size: 34px;
+  --h2-size: 28px;
+  --body-size: 14px;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-body);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+  font-size: var(--body-size);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+h1 {
+  font-size: var(--h1-size);
+}
+
+h2 {
+  font-size: var(--h2-size);
+}
+
+/* Buttons */
+.btn,
+button {
+  border-radius: var(--radius-button);
+  font-family: var(--font-body);
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: #FFFFFF;
+}
+
+.btn-secondary {
+  background: var(--color-secondary);
+  color: #FFFFFF;
+}
+
+.btn-accent {
+  background: var(--color-accent);
+  color: #FFFFFF;
+}
+
+.btn-success {
+  background: var(--color-success);
+  color: #FFFFFF;
+}
+
+/* Cards */
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius-card);
+  border: 1px solid var(--color-border);
+}
+
+/* Inputs */
+input,
+select,
+textarea {
+  height: var(--input-height);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-button);
+  font-family: var(--font-body);
+}
+
+/* Tables */
+table tr {
+  height: var(--table-row-height);
+}
+
+table {
+  border-color: var(--color-border);
 }
