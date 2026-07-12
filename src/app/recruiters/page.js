@@ -1,6 +1,6 @@
-import Footer from '@/Components/Layout/Footer/Footer'
-import Navbar from '@/Components/Layout/Navbar/Navbar'
-import Recruiter from '@/Components/Recruiters/Recruiters'
+import Footer from '@/Components/LandingPage/Layout/Footer/Footer'
+import Navbar from '@/Components/LandingPage/Layout/Navbar/Navbar'
+import Recruiter from '@/Components/LandingPage/Recruiters/Recruiters'
 import React from 'react'
 
 const page = () => {

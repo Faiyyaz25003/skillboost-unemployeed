@@ -10,7 +10,7 @@ import {
   Award,
   Headphones,
 } from "lucide-react";
-import "../../../app/globals.css";
+import "../../../../app/globals.css";
 
 /* lucide-react removed brand/logo icons in newer versions, so social
    icons are plain inline SVGs here instead of a package dependency. */

@@ -1,6 +1,6 @@
-import Jobs from '@/Components/Jobs/Jobs'
-import Footer from '@/Components/Layout/Footer/Footer'
-import Navbar from '@/Components/Layout/Navbar/Navbar'
+import Jobs from '@/Components/LandingPage/Jobs/Jobs'
+import Footer from '@/Components/LandingPage/Layout/Footer/Footer'
+import Navbar from '@/Components/LandingPage/Layout/Navbar/Navbar'
 import React from 'react'
 
 const page = () => {

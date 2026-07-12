@@ -1,6 +1,6 @@
-import Contact from '@/Components/Contact/Contact'
-import Footer from '@/Components/Layout/Footer/Footer'
-import Navbar from '@/Components/Layout/Navbar/Navbar'
+import Contact from '@/Components/LandingPage/Contact/Contact'
+import Footer from '@/Components/LandingPage/Layout/Footer/Footer'
+import Navbar from '@/Components/LandingPage/Layout/Navbar/Navbar'
 import React from 'react'
 
 const page = () => {

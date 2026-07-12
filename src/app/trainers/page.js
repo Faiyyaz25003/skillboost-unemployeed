@@ -1,6 +1,6 @@
-import Footer from '@/Components/Layout/Footer/Footer'
-import Navbar from '@/Components/Layout/Navbar/Navbar'
-import Trainner from '@/Components/Trainner/Trainner'
+import Footer from '@/Components/LandingPage/Layout/Footer/Footer'
+import Navbar from '@/Components/LandingPage/Layout/Navbar/Navbar'
+import Trainner from '@/Components/LandingPage/Trainner/Trainner'
 import React from 'react'
 
 const page = () => {
