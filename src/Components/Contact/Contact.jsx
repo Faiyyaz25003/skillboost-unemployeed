@@ -51,14 +51,8 @@ export default function ContactPage() {
         <div className="mx-auto max-w-7xl px-6 py-14 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           {/* Left */}
           <div>
-            <div className="inline-flex items-center gap-2 text-sm bg-white border border-gray-200 rounded-full px-4 py-1.5 text-gray-500 mb-6">
-              <span>Home</span>
-              <span>›</span>
-              <span className="text-gray-700">Contact Us</span>
-            </div>
-
             <h1 className="text-4xl md:text-5xl font-extrabold leading-tight text-gray-900">
-              We're Here to
+              We are Here to
               <br />
               <span className="text-blue-600">Help You!</span>
             </h1>
@@ -105,30 +99,10 @@ export default function ContactPage() {
           {/* Right */}
           <div className="relative flex justify-center">
             <img
-              src="/images/hero-support-agent.jpg"
-              alt="Customer support agent smiling while working on a laptop"
-              className="w-full max-w-md rounded-2xl object-cover bg-gray-200 aspect-[4/5]"
+              src="/Contact/Contact.png"
+              alt="Customer support"
+              className="w-full max-w-2xl h-auto object-contain rounded-2xl"
             />
-
-            {/* Floating chat bubble */}
-            <div className="absolute top-2 left-0 md:left-4 bg-blue-600 text-white text-sm px-4 py-2 rounded-2xl rounded-bl-none shadow-lg">
-              How can we help you?
-            </div>
-
-            {/* Floating email icon */}
-            <div className="absolute top-1/3 -left-2 md:left-2 w-11 h-11 rounded-2xl bg-white shadow-lg flex items-center justify-center">
-              <Mail className="w-5 h-5 text-orange-500" />
-            </div>
-
-            {/* Floating phone icon */}
-            <div className="absolute top-8 right-0 md:-right-2 w-11 h-11 rounded-2xl bg-teal-500 shadow-lg flex items-center justify-center">
-              <Phone className="w-5 h-5 text-white" />
-            </div>
-
-            {/* Floating chat dots icon */}
-            <div className="absolute bottom-6 right-2 md:right-6 w-10 h-10 rounded-full bg-white shadow-lg flex items-center justify-center">
-              <MessageCircle className="w-5 h-5 text-blue-600" />
-            </div>
           </div>
         </div>
       </section>
@@ -141,7 +115,7 @@ export default function ContactPage() {
             Send Us a <span className="text-blue-600">Message</span>
           </h2>
           <p className="text-gray-500 mt-2 mb-6">
-            Fill out the form below and we'll get back to you as soon as
+            Fill out the form below and we will get back to you as soon as
             possible.
           </p>
 
@@ -296,13 +270,16 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* ---------- MAP ---------- */}
+      {/* ---------- MAP (real, searchable Google Map) ---------- */}
       <section className="mx-auto max-w-7xl px-6 pb-16">
         <div className="relative rounded-2xl overflow-hidden border border-gray-200">
-          <img
-            src="/images/office-map.jpg"
-            alt="Map showing SkillUp Head Office location in Bangalore"
-            className="w-full h-[420px] object-cover bg-gray-200"
+          <iframe
+            title="SkillUp Head Office Location Map"
+            src="https://www.google.com/maps?q=Tech+Park+Bangalore+Karnataka+560001&output=embed"
+            className="w-full h-[420px] border-0"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            allowFullScreen
           />
           <div className="absolute top-6 left-6 bg-white rounded-xl shadow-lg p-5 w-72">
             <div className="flex items-start gap-2">
@@ -316,7 +293,9 @@ export default function ContactPage() {
                   560001
                 </p>
                 <a
-                  href="#"
+                  href="https://www.google.com/maps/search/?api=1&query=Tech+Park+Bangalore+Karnataka+560001"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-blue-600 text-sm font-medium mt-2 inline-block"
                 >
                   View on Google Maps
@@ -339,26 +318,31 @@ export default function ContactPage() {
               city: "Mumbai",
               address: "101, Andheri West, Mumbai, Maharashtra - 400053",
               phone: "+91 98765 43211",
+              image: "/Contact/Mumbai.png",
             },
             {
               city: "Delhi",
               address: "202, Connaught Place, New Delhi, Delhi - 110001",
               phone: "+91 98765 43212",
+              image: "/Contact/Delhi.png",
             },
             {
               city: "Pune",
               address: "303, Hinjawadi Phase 1, Pune, Maharashtra - 411057",
               phone: "+91 98765 43213",
+              image: "/Contact/Pune.png",
             },
             {
               city: "Hyderabad",
               address: "404, Gochibowli, Hyderabad, Telangana - 500032",
               phone: "+91 98765 43214",
+              image: "/Contact/Hyderabad.png",
             },
             {
               city: "Kolkata",
               address: "505, Salt Lake, Kolkata, West Bengal - 700091",
               phone: "+91 98765 43215",
+              image: "/Contact/Kolkata.png",
             },
           ].map((branch) => (
             <div
@@ -366,7 +350,7 @@ export default function ContactPage() {
               className="rounded-xl overflow-hidden border border-gray-200"
             >
               <img
-                src={`/images/branch-${branch.city.toLowerCase()}.jpg`}
+                src={branch.image}
                 alt={`${branch.city} branch office building`}
                 className="w-full h-28 object-cover bg-gray-200"
               />
