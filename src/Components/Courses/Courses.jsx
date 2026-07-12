@@ -419,27 +419,12 @@ export default function CoursesPage() {
           </div>
 
           {/* decorative hero image */}
-          <div className="relative mx-auto hidden aspect-square w-full max-w-md items-center justify-center lg:flex">
-            <div className="absolute inset-0 rounded-full bg-[var(--color-primary)]/90" />
-            <div className="relative z-10 flex h-64 w-64 items-center justify-center overflow-hidden rounded-full bg-blue-200">
-              <GraduationCap className="h-28 w-28 text-[var(--color-primary)]" />
-            </div>
-
-            {[
-              { icon: Sparkles, pos: "left-2 top-8", bg: "bg-pink-500" },
-              { icon: Cloud, pos: "right-2 top-16", bg: "bg-sky-500" },
-              { icon: BarChart3, pos: "left-10 top-40", bg: "bg-teal-500" },
-              { icon: ShieldCheck, pos: "left-0 bottom-16", bg: "bg-blue-700" },
-              { icon: Layers, pos: "right-6 bottom-24", bg: "bg-gray-700" },
-              { icon: Target, pos: "right-10 bottom-4", bg: "bg-orange-500" },
-            ].map((b, i) => (
-              <div
-                key={i}
-                className={`absolute ${b.pos} z-20 flex h-11 w-11 items-center justify-center rounded-full ${b.bg} shadow-md`}
-              >
-                <b.icon className="h-5 w-5 text-white" />
-              </div>
-            ))}
+          <div>
+            <img
+              src="/Course/Course.jpeg"
+              alt="Students learning in-demand skills"
+              className="w-full max-w-[200px] sm:max-w-[240px] lg:max-w-[280px] h-auto ml-auto rounded-2xl object-contain"
+            />
           </div>
         </div>
       </section>
