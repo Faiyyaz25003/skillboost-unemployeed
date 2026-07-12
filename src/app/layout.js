@@ -1,6 +1,4 @@
 import "./globals.css";
-import Navbar from "@/Components/Layout/Navbar/Navbar";
-import Footer from "@/Components/Layout/Footer/Footer";
 
 export const metadata = {
   title: "SkillUp | Digital Skills Bootcamp",
@@ -12,9 +10,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <Navbar/>
         {children}
-        <Footer/>
       </body>
     </html>
   );

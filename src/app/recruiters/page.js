@@ -1,10 +1,14 @@
+import Footer from '@/Components/Layout/Footer/Footer'
+import Navbar from '@/Components/Layout/Navbar/Navbar'
 import Recruiter from '@/Components/Recruiters/Recruiters'
 import React from 'react'
 
 const page = () => {
   return (
     <div>
-      <Recruiter/>
+      <Navbar/>
+      <Recruiter />
+      <Footer/>
     </div>
   )
 }

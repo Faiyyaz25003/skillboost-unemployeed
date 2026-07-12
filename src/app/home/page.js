@@ -1,14 +1,15 @@
-import Courses from '@/Components/Courses/Courses'
+import Home from '@/Components/Home/Home'
 import Footer from '@/Components/Layout/Footer/Footer'
 import Navbar from '@/Components/Layout/Navbar/Navbar'
+
 import React from 'react'
 
 const page = () => {
   return (
-    <div>
-      <Navbar/>
-      <Courses />
-      <Footer/>
+      <div>
+          <Navbar/>
+          <Home />
+          <Footer/>
     </div>
   )
 }
